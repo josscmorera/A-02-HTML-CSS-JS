@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#counter {
+    font-size: 3em;
+}
+
+button {
+    margin: 1em;
+}
