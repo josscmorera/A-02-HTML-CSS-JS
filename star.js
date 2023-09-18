@@ -1,11 +1,21 @@
 let counter = 0;
 
-document.getElementById('add-button').addEventListener('click', function() {
+function updateStars() {
+    const starsDiv = document.getElementById('stars');
+    starsDiv.innerHTML = '';
+    for (let i = 0; i < counter; i++) {
+        const starImg = document.createElement('img');
+        starImg.src = 'star.png';
+        starsDiv.appendChild(starImg);
+    }
+}
+
+document.getElementById('add-button').addEventListener('click', function () {
     counter++;
     document.getElementById('counter').innerText = counter;
 });
 
-document.getElementById('remove-button').addEventListener('click', function() {
+document.getElementById('remove-button').addEventListener('click', function () {
     if (counter > 0) {
         counter--;
         document.getElementById('counter').innerText = counter;
